@@ -1,0 +1,152 @@
+.little-info {
+   max-width: 460px;
+   width: 100%;
+   height: 100vh;
+   background: var(--bg-side-color);
+   position: relative;
+}
+.close {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   top: 46px;
+   right: 45px;
+   cursor: pointer;
+}
+.close__line {
+   display: block;
+   background: var(--font-color, #48484a);
+   height: 3px;
+   position: absolute;
+   width: 26px;
+}
+.close__line--first {
+   transform: rotate(45deg);
+}
+.close__line--second {
+   transform: rotate(135deg);
+}
+.aside-buttons {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: min-content;
+   padding: 0 44px;
+   margin-bottom: 18px;
+}
+.search-city {
+   border-radius: 10px;
+   border: 2px solid #acacac;
+   background: var(--bg-side-color);
+   padding: 15px 27px;
+   margin-top: 44px;
+   color: var(--font-color, #48484a);
+   text-align: center;
+   cursor: pointer;
+   font-size: 18px;
+   font-weight: 700;
+}
+#theme-switcher {
+   display: none;
+}
+.checkbox {
+   width: 64px;
+   height: 32px;
+   background: var(--panel-light);
+   border: 2px solid var(--hint);
+   border-radius: 15px;
+   padding: 4px;
+   transition:  background-color 0.3s ease;
+}
+.checkbox .checkbox__wrapper {
+   display: block;
+   position: relative;
+   width: 22px;
+   height: 22px;
+   border-radius: 50%;
+   background: var(--bg-dark);
+   transition: 0.3s ease
+}
+.checkbox .checkbox__wrapper svg {
+   position: absolute;
+   top: -17%;
+   left: -163%;
+}
+.checkbox .checkbox__wrapper svg path {
+   transform: 0.3s ease;
+   fill: var(--light-gray)
+}
+#theme-switcher:checked + .checkbox__wrapper {
+   transform: translateX(140%);
+   background: var(--accent);
+}
+#theme-switcher:checked + .checkbox__wrapper svg path {
+   fill: var(--bg-dark)
+}
+.weather {
+   display: grid;
+   grid-template-columns: 288px;
+   grid-template-rows: 200px;
+   justify-content: center;
+   height: max-content;
+   background: url('../images/png/Cloud-background.png'), lightgray 50% / cover;
+   background-repeat: no-repeat;
+   background-blend-mode: difference;
+   background-color: var(--bg-side-color);
+   height: 100%;
+   transition: 0.3s ease
+}
+.weather__icon {
+   max-width: 200px;
+   max-height: 200px;
+   margin: 0 auto;
+}
+.weather-temperature {
+   color: var(--font-color, #48484a);
+   text-align: center;
+   font-size: 96px;
+   font-weight: 900;
+   margin-bottom: 20px;
+}
+.weather-temperature .degree {
+   font-size: 50px;
+   font-weight: 500;
+}
+.weather__name {
+   color: var(--font-color, #48484a);
+   font-size: 36px;
+   font-weight: 700;
+   line-height: 36px;
+   text-align: center;
+   margin-bottom: 17px;
+}
+.feels {
+   color: #acacac;
+   text-align: center;
+   font-weight: 400;
+   font-size: 18px;
+   margin-bottom: 80px;
+}
+.date {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 25px;
+}
+.date h4 {
+   color: #acacac;
+   text-align: center;
+   font-size: 18px;
+   font-weight: 400;
+}
+.city {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+}
+.city__name {
+   color: #acacac;
+   text-align: center;
+   font-size: 18px;
+   text-decoration: none;
+}

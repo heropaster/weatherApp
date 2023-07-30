@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="little-info">
+            <div class="search-overlay">
+                <div class="close">
+                    <span class="close__line close__line--first"></span>
+                    <span class="close__line close__line--second"></span>
+                </div>
+                <div class="search-container">
+                    <input type="text" name="" id="" placeholder="Москва" class="search-input">
+                    <button class="find">Найти</button>
+                </div>
+            </div>
+            <div class="aside-buttons">
+                <button class="search-city">Поиск города</button>
+                <label for="theme-switcher" class="checkbox">
+                    <input type="checkbox" name="theme-switcher" id="theme-switcher">
+                    <span class="checkbox__wrapper">
+                        <svg width="64" height="32" viewBox="0 0 64 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M51.6067 11.1213C50.8345 10.3492 49.8969 9.8358 48.9126 9.57276C49.4472 11.5753 48.9338 13.7942 47.364 15.364C45.7943 16.9337 43.5754 17.4471 41.5728 16.9125C41.8359 17.8968 42.3492 18.8344 43.1214 19.6066C45.4633 21.9485 49.2647 21.9485 51.6067 19.6066C53.9486 17.2647 53.9486 13.4633 51.6067 11.1213Z" fill="#212331"/>
+                            </svg>
+                    </span>
+                </label>
+            </div>
+            <div class="weather">
+                <img src="./images/png/snow.png" alt="snow" class="weather__icon">
+                <div class="weather-temperature">
+                    1 <span class="degree">°C</span>
+                </div>
+                <h3 class="weather__name">
+                    Снег
+                </h3>
+                <h4 class="feels">
+                    Ощущается как -3 °C
+                </h4>
+                <div class="date">
+                    <h4 class="day">Сегодня</h4>
+                    <h4 class="weekday">Вс, 13 мар</h4>
+                </div>
+                <div class="city">
+                    <a href="#" class="mark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path
+                                d="M19.9999 3.33334C13.5499 3.33334 8.33325 8.55001 8.33325 15C8.33325 23.75 19.9999 36.6667 19.9999 36.6667C19.9999 36.6667 31.6666 23.75 31.6666 15C31.6666 8.55001 26.4499 3.33334 19.9999 3.33334ZM19.9999 19.1667C18.8949 19.1667 17.835 18.7277 17.0536 17.9463C16.2722 17.1649 15.8333 16.1051 15.8333 15C15.8333 13.8949 16.2722 12.8351 17.0536 12.0537C17.835 11.2723 18.8949 10.8333 19.9999 10.8333C21.105 10.8333 22.1648 11.2723 22.9462 12.0537C23.7276 12.8351 24.1666 13.8949 24.1666 15C24.1666 16.1051 23.7276 17.1649 22.9462 17.9463C22.1648 18.7277 21.105 19.1667 19.9999 19.1667Z"
+                                fill="#EC6E4D" />
+                        </svg>
+                    </a>
+                    <a href="#" class="city__name">Москва</a>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="forecast">
+                <div class="forecast__heading">
+                    <h2 class="forecast__title title">
+                        Прогноз
+                    </h2>
+                    <ul class="forecast__paging paging">
+                        <li class="paging__item paging__item--week active">
+                            <a href="#">на неделю</a>
+                        </li>
+                        <li class="paging__item paging__item--hour">
+                            <a href="#">почасовой</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="forecast-slider">
+                    
+                </div>
+                <div class="weather-swiper">
+                    <div class="swiper--week swiper showed">
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                Завтра
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/fog.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                                <span class="degrees__night">4°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                Пн, 15 мар
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/rain.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                                <span class="degrees__night">4°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                Вт, 16 мар
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/rain.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                                <span class="degrees__night">4°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                Ср, 17 мар
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/thunder.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                                <span class="degrees__night">4°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                Чт, 18 мар
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/thunder.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                                <span class="degrees__night">4°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                Пт, 19 мар
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/thunder.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                                <span class="degrees__night">4°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                Сб, 20 мар
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/thunder.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                                <span class="degrees__night">4°C</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper--hour swiper">
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                15:00
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/fog.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                16:00
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/fog.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                17:00
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/fog.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                18:00
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/fog.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                19:00
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/thunder.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                20:00
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/thunder.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                21:00
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/fog.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                22:00
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/fog.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                23:00
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/thunder.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                00:00
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/fog.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                01:00
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/fog.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                            </span>
+                        </div>
+                        <div class="swiper__item">
+                            <span class="swiper__item__date">
+                                02:00
+                            </span>
+                            <div class="swiper__item__weather">
+                                <img src="./images/png/fog.png" alt="">
+                            </div>
+                            <span class="degrees">
+                                <span class="degrees__day">10°C</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <h2 class="details__title title">Подробно на сегодня</h2>
+                <div class="details__cards cards">
+                    <div class="cards__item card--big wind">
+                        <h3 class="cards__item__subtitle">
+                            Скорость ветра
+                        </h3>
+                        <div class="cards__item__content content__primary wind-speed">
+                            7 <span class="content__primary__small">м/с</span>
+                        </div>
+                        <div class="cards__item__content content__secondary wind-direction">
+                            <div class="wind-direction__image">
+                                <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="19" cy="19" r="19" fill="#48484A" />
+                                    <path
+                                        d="M18.1951 31.0029L10.0872 10.8978C9.76221 10.092 10.5487 9.28365 11.3631 9.58643L31.9073 17.2246C32.7267 17.5293 32.7906 18.6717 32.0237 19.0912C26.1915 22.2822 23.1612 25.3608 20.0501 31.0907C19.6388 31.8482 18.5175 31.8023 18.1951 31.0029Z"
+                                        fill="#E6E6E6" />
+                                </svg>
+                            </div>
+                            <span class="wind-direction__text">
+                                СЗ
+                            </span>
+                        </div>
+                    </div>
+                    <div class="cards__item card--big wetness">
+                        <h3 class="cards__item__subtitle">
+                            Влажность
+                        </h3>
+                        <div class="cards__item__content content__primary wetness-percentile">
+                            84 <span class="content__primary__small">%</span>
+                        </div>
+                    </div>
+                    <div class="cards__item card--small visibility">
+                        <h3 class="cards__item__subtitle">
+                            Видимость
+                        </h3>
+                        <div class="cards__item__content content__primary visibility-range">
+                            6.2 <span class="content__primary__small">км</span>
+                        </div>
+                    </div>
+                    <div class="cards__item card--small pressure">
+                        <h3 class="cards__item__subtitle">
+                            Давление
+                        </h3>
+                        <div class="cards__item__content content__primary pressure-size">
+                            742 <span class="content__primary__small">мм рт. ст.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./src/index.js"></script>
+</body>
+
+</html>

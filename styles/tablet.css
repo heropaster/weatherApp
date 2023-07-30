@@ -1,0 +1,32 @@
+@media (min-width: 834px) and (max-width: 1439px) {
+   .little-info {
+      height: 100vh;
+      min-width: 329px;
+   }
+   .weather {
+      height: max-content;
+   }
+   .little-info .weather {
+      margin-top: 204px;
+   }
+   .little-info .weather-temperature {
+      margin-top: 192px;
+   }
+   .main {
+      padding-left: 78px;
+      padding-right: 78px;
+   }
+   .swiper.showed{
+      --columns: 3;
+      overflow-x: scroll;
+      max-width: 348px;
+      display: grid;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      column-gap: 24px;
+      grid-auto-flow: column;
+   }
+   .details__cards {
+      grid-template-columns: 320px;
+      row-gap: 27px;
+   }
+}
