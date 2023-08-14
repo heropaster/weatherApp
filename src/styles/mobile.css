@@ -1,0 +1,93 @@
+@media (min-width: 320px) and (max-width: 833px) {
+	.container {
+		flex-direction: column;
+		width: 100vw;
+	}
+	.little-info {
+		max-width: 100%;
+		max-height: 600px;
+		padding-top: 30px;
+		padding-bottom: 44px;
+	}
+	.search-overlay {
+		height: 90vh;
+	}
+	.little-info .search-city {
+		margin-top: 0;
+	}
+	.aside-buttons {
+		padding: 30px;
+	}
+	.weather {
+		background-size: cover;
+		display: flex;
+		flex-direction: column;
+		gap: 17px;
+	}
+	.weather__icon {
+		margin-bottom: -35px;
+		margin-top: -20px;
+	}
+	.date {
+		margin: 0 auto;
+		width: 285px;
+	}
+	.feels {
+		margin-bottom: 63px;
+	}
+	.weather-temperature {
+		margin: 0;
+	}
+	.weather__name {
+		margin: 0;
+	}
+	.main {
+		padding: 0;
+		margin-top: 130px;
+		align-items: center;
+	}
+
+	.forecast {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.forecast__heading {
+		flex-direction: column;
+		margin-bottom: 44px;
+	}
+	.forecast__title {
+		margin-top: 50px;
+	}
+	.forecast__heading .paging {
+		gap: 55px;
+	}
+	.forecast-slider {
+		display: none;
+	}
+	.forecast__swiper.showed {
+		display: grid;
+		grid-template-columns: repeat(2, 100px);
+		column-gap: 55px;
+		row-gap: 30px;
+		justify-content: center;
+	}
+	.swiper--week .swiper__item:last-child {
+		display: flex;
+	}
+	.swiper--hour .swiper__item:nth-child(n + 6) {
+		display: flex;
+	}
+	.details {
+		padding-bottom: 96px;
+	}
+	.details .details__title {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.details .details__cards {
+		grid-template-columns: 314px;
+		row-gap: 43px;
+	}
+}

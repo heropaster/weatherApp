@@ -1,0 +1,16 @@
+@import "./forecast.css";
+@import "./details.css";
+.main {
+	width: 100%;
+	padding: 42px 120px 42px 140px;
+	display: flex;
+	flex-direction: column;
+	gap: 38px;
+	background: var(--bg-main-color);
+}
+.title {
+	color: var(--gray, #48484a);
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 100%;
+}

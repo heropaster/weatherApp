@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap');
+@import './search.css';
+@import './aside.css';
+@import './maincontent.css';
+@import './adaptive.css';
+:root {
+   --bg-main-color: #f1f1f1;
+   --bg-side-color: #fff;
+   --panel-light: #fff;
+   --font-color: #48484a;
+   --hint: #acacac;
+   --bg-dark: #100e1c;
+   --light-gray: #e6e6e6;
+   --accent: #ec6e4c;
+   --gray-span: #d3d3d3;
+   --progress-back: #d3d3d3;
+}
+.dark {
+   --panel-light: #212331;
+   --font-color: #e6e6e6;
+   --bg-side-color: #212331;
+   --gray-span: #6d6d6d;
+   --gray: #e6e6e6;
+   --bg-main-color: #100e1c;
+   --hint: #6d6d6d;
+   --light-gray: #100e1c;
+   --progress-back: #e6e6e6;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+body,
+html {
+   height: 100vh;
+   overflow-x: hidden;
+}
+input,
+button {
+   font-family: 'Rubik', sans-serif;
+}
+body {
+   /* background: var(--bg-main-color); */
+   font-family: 'Rubik', sans-serif;
+}
+.container {
+   display: flex;
+}
+
+.lds-ellipsis {
+   display: inline-block;
+   position: relative;
+   width: 80px;
+   height: 80px;
+}
+.lds-ellipsis div {
+   position: absolute;
+   top: 33px;
+   width: 13px;
+   height: 13px;
+   border-radius: 50%;
+   background: #fff;
+   animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+   left: 8px;
+   animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+   left: 8px;
+   animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+   left: 32px;
+   animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+   left: 56px;
+   animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+   0% {
+      transform: scale(0);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+@keyframes lds-ellipsis3 {
+   0% {
+      transform: scale(1);
+   }
+   100% {
+      transform: scale(0);
+   }
+}
+@keyframes lds-ellipsis2 {
+   0% {
+      transform: translate(0, 0);
+   }
+   100% {
+      transform: translate(24px, 0);
+   }
+}
+.loading-bg {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.3);
+   z-index: 100;
+}
